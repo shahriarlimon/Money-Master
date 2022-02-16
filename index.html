@@ -18,7 +18,7 @@
             <!-- WHOLE STRUCTURE CONTAINER -->
             <div class="flex flex-col md:flex-row align-center justify-evenly mt-5 min-h-screen ">
                 <!-- LEFT PART -->
-                <div class=" md:w-3/5 mb-3"> <img class="md:w-3/5" src="images/finance.jpg" alt=""></div>
+                <div class="md:w-3/5 mb-3"> <img class="md:w-3/5" src="images/finance.jpg" alt=""></div>
                
                 <!-- RIGHT PART -->
                 <div class="bg-slate-200 p-8  md:w-2/5">
@@ -27,7 +27,7 @@
                         <h3 class="text-3xl text-center font-semibold">Income</h3>
                         <div class="flex align-center p-5 ">
                             <p class="text-2xl">Income:</p>
-                            <input type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
+                            <input id="income-input" type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
                         </div>
                     </div>
                     <!-- EXPANSE CONTAINER -->
@@ -35,42 +35,42 @@
                         <h3 class="text-3xl text-center font-semibold">Expanse</h3>
                         <div class=" flex flex-row align-center p-5 ">
                             <p class="text-2xl">Food:</p>
-                            <input type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
+                            <input id="food-input" type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
                         </div>
                         <div class="flex flex-row align-center p-5 ">
                             <p class="text-2xl">Rent:</p>
-                            <input type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
+                            <input id="rent-input" type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
                         </div>
                         <div class="flex flex-row align-center p-5 ">
                             <p class="text-2xl">Clothes:</p>
-                            <input type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
+                            <input id="cloth-input" type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
                         </div>
                     </div>
                     <!-- CALCULATE BUTTON -->
                     <div class="flex flex-row align-center justify-center">
-                        <button class="text-center text-xl text-white px-5 py-3 bg-green-600 border rounded">Calculate</button>
+                        <button id="calculate-btn" class="text-center text-xl text-white px-5 py-3 bg-green-600 border rounded">Calculate</button>
                     </div>
                     <!-- TOTAL BALANCE AND REMAINING BALANCE -->
                     <div class="p-5">
-                        <h4 class="text-center text-2xl font-semibold">Total Expanse :<span> 1000</span></h4>
-                        <h4 class="text-center text-2xl font-semibold ">Balance :<span> 1000</span></h4>
+                        <h4 class="text-center text-2xl font-semibold">Total Expanse :<span id="total-expanse"> 1000</span></h4>
+                        <h4 class="text-center text-2xl font-semibold ">Balance :<span id="balance"> 1000</span></h4>
                     </div>
                     <!-- SAVE CALCULATION PORTION -->
                     <div class="flex align-center">
                         <div class="flex flex-row flex-around p-5">
                             <h4 class="text-2xl">Save:</h4>
-                            <input type="text" value="10" class=" w-3/5 ml-3 text-center font-semibold">
+                            <input id="save-input" type="text" value="10" class=" w-3/5 md:w-9/12 ml-3 text-center font-semibold">
                             <span><i class="bi bi-percent ml-3 mt-2 text-xl"></i></span>
                         </div>
                         <div>
-                            <button class="text-center text-xl text-white px-4 py-2 mt-2 bg-green-600 border rounded">Save</button>
+                            <button id="save-btn" class="text-center text-xl text-white px-4 py-2 mt-2 bg-green-600 border rounded">Save</button>
                         </div>
 
                     </div>
                     <!-- SAVING AMOUNT AND REMAINING BALANCE SECTION -->
                     <div class="p-5">
-                        <h4 class="text-center text-xl font-semibold ">Saving Amount :<span> 1000</span></h4>
-                        <h4 class="text-center text-xl font-semibold ">Remaing Balance :<span> 1000</span></h4>
+                        <h4 class="text-center text-xl font-semibold ">Saving Amount :<span id="saving-amount"> 1000</span></h4>
+                        <h4 class="text-center text-xl font-semibold ">Remaing Balance :<span id="remaining-balance"> 1000</span></h4>
                     </div>
 
                 </div>
