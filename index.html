@@ -7,9 +7,76 @@
     <title>Finance Checker</title>
     <!-- TAILWIND CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- BOOTSTRAP ICON CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+
 </head>
 <body>
-    <main></main>
+    <main>
+        <section class="bg-white m-5">
+            <h3 class="text-4xl text-center text-green-500 font-semibold">Track Your Finance: Finance Tracker</h3>
+            <!-- WHOLE STRUCTURE CONTAINER -->
+            <div class="flex flex-col md:flex-row align-center justify-evenly mt-5 min-h-screen ">
+                <!-- LEFT PART -->
+                <div class=" md:w-3/5 mb-3"> <img class="md:w-3/5" src="images/finance.jpg" alt=""></div>
+               
+                <!-- RIGHT PART -->
+                <div class="bg-slate-200 p-8  md:w-2/5">
+                    <!-- INCOME CONTAINER -->
+                    <div>
+                        <h3 class="text-3xl text-center font-semibold">Income</h3>
+                        <div class="flex align-center p-5 ">
+                            <p class="text-2xl">Income:</p>
+                            <input type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
+                        </div>
+                    </div>
+                    <!-- EXPANSE CONTAINER -->
+                    <div class="p-3">
+                        <h3 class="text-3xl text-center font-semibold">Expanse</h3>
+                        <div class=" flex flex-row align-center p-5 ">
+                            <p class="text-2xl">Food:</p>
+                            <input type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
+                        </div>
+                        <div class="flex flex-row align-center p-5 ">
+                            <p class="text-2xl">Rent:</p>
+                            <input type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
+                        </div>
+                        <div class="flex flex-row align-center p-5 ">
+                            <p class="text-2xl">Clothes:</p>
+                            <input type="text" value="1000" class="w-3/4 ml-3 pl-3 font-semibold">
+                        </div>
+                    </div>
+                    <!-- CALCULATE BUTTON -->
+                    <div class="flex flex-row align-center justify-center">
+                        <button class="text-center text-xl text-white px-5 py-3 bg-green-600 border rounded">Calculate</button>
+                    </div>
+                    <!-- TOTAL BALANCE AND REMAINING BALANCE -->
+                    <div class="p-5">
+                        <h4 class="text-center text-2xl font-semibold">Total Expanse :<span> 1000</span></h4>
+                        <h4 class="text-center text-2xl font-semibold ">Balance :<span> 1000</span></h4>
+                    </div>
+                    <!-- SAVE CALCULATION PORTION -->
+                    <div class="flex align-center">
+                        <div class="flex flex-row flex-around p-5">
+                            <h4 class="text-2xl">Save:</h4>
+                            <input type="text" value="10" class=" w-3/5 ml-3 text-center font-semibold">
+                            <span><i class="bi bi-percent ml-3 mt-2 text-xl"></i></span>
+                        </div>
+                        <div>
+                            <button class="text-center text-xl text-white px-4 py-2 mt-2 bg-green-600 border rounded">Save</button>
+                        </div>
+
+                    </div>
+                    <!-- SAVING AMOUNT AND REMAINING BALANCE SECTION -->
+                    <div class="p-5">
+                        <h4 class="text-center text-xl font-semibold ">Saving Amount :<span> 1000</span></h4>
+                        <h4 class="text-center text-xl font-semibold ">Remaing Balance :<span> 1000</span></h4>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="JS/app.js"></script>
 </body>
 </html>
