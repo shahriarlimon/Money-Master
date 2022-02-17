@@ -1,8 +1,9 @@
 
+// GET THE INPUT THE AMOUNT FROM INPUT FIELD
 
 function getInputAmount(inputId){
     const inputValue = document.getElementById(inputId).value;
-    const inputAmount = parseInt(inputValue);
+    const inputAmount = parseFloat(inputValue);
     return inputAmount;
 }
 
@@ -21,12 +22,12 @@ document.getElementById("calculate-btn").addEventListener('click',function(){
     document.getElementById("total-expanse").innerText = totalExpanse;
  
     // calculating remaining balance
-    if(incomeAmount > totalExpanse){
+    if(incomeAmount >= totalExpanse){
         const remainedBalance = incomeAmount - totalExpanse;
         document.getElementById("balance").innerText = remainedBalance;
     }
     else{
-        document.getElementById("balance").innerText = "You don't have enough money pay the expanse";
+        document.getElementById("balance").innerText = "You don't have enough money to pay the expanse";
         document.getElementById("balance").style.color = "red";
     }
 
@@ -101,6 +102,17 @@ document.getElementById("save-btn").addEventListener('click',function(){
         }
         else if ( e.target.value >= 0){
             document.getElementById("errfn-cloth").innerText ='';
+        }
+
+    })
+
+    document.getElementById("save-input").addEventListener('keyup',function(e){
+        if (e.target.value < 0){
+            document.getElementById("errfn-save").innerText = 'Please Enter Valid Number';
+            document.getElementById("errfn-save").style.color = 'red';
+        }
+        else if ( e.target.value >= 0){
+            document.getElementById("errfn-save").innerText ='';
         }
 
     })
