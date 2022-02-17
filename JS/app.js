@@ -21,23 +21,45 @@ document.getElementById("calculate-btn").addEventListener('click',function(){
     document.getElementById("total-expanse").innerText = totalExpanse;
  
     // calculating remaining balance
+    if(incomeAmount > totalExpanse){
+        const remainedBalance = incomeAmount - totalExpanse;
+        document.getElementById("balance").innerText = remainedBalance;
+    }
+    else{
+        document.getElementById("balance").innerText = "You don't have enough money pay the expanse";
+        document.getElementById("balance").style.color = "red";
+    }
 
-    const remainedBalance = incomeAmount - totalExpanse;
-    document.getElementById("balance").innerText = remainedBalance;
+    
 });
 
 document.getElementById("save-btn").addEventListener('click',function(){
     const incomeAmount = getInputAmount("income-input");
     const savedInputAmount = getInputAmount("save-input");
     const savedInputNumber = savedInputAmount/100;
+    // get balance after expanse
+    const balanceAfterExpanse = document.getElementById("balance").innerText;
     // calculating saving amount
     const savedAmount = incomeAmount * savedInputNumber;
-    document.getElementById("saving-amount").innerText = savedAmount;
+    if ( savedAmount < balanceAfterExpanse){
+        document.getElementById("saving-amount").innerText = savedAmount;
+    }
+    else{
+        document.getElementById("saving-amount").innerText = "You don't have enough money to save";
+        document.getElementById("saving-amount").style.color = "red";
+
+    }
+   
 
     // calculating overall remaining balance after saving
-    const balanceAfterExpanse = document.getElementById("balance").innerText
+   if ( savedAmount < balanceAfterExpanse){
     const remainingBalance = balanceAfterExpanse - savedAmount;
     document.getElementById("remaining-balance").innerText = remainingBalance;
+   }
+   else{
+    document.getElementById("remaining-balance").innerText = "No Balance";
+    document.getElementById("remaining-balance").style.color = "red";
+   }
 })
 
     // ERROR HANDLING
