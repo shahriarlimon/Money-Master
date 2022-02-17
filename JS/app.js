@@ -39,3 +39,50 @@ document.getElementById("save-btn").addEventListener('click',function(){
     const remainingBalance = balanceAfterExpanse - savedAmount;
     document.getElementById("remaining-balance").innerText = remainingBalance;
 })
+
+    // ERROR HANDLING
+
+    document.getElementById("income-input").addEventListener('keyup',function(e){
+        if (e.target.value < 0){
+            document.getElementById("errfn-income").innerText = 'Please Enter Valid Number';
+            document.getElementById("errfn-income").style.color = 'red';
+        }
+        else if ( e.target.value >= 0){
+            document.getElementById("errfn-income").innerText ='';
+        }
+
+    })
+    document.getElementById("food-input").addEventListener('keyup',function(e){
+        if (e.target.value < 0){
+            document.getElementById("errfn-food").innerText = 'Please Enter Valid Number';
+            document.getElementById("errfn-food").style.color = 'red';
+        }
+        else if ( e.target.value >= 0){
+            document.getElementById("errfn-food").innerText ='';
+        }
+
+    })
+    document.getElementById("rent-input").addEventListener('keyup',function(e){
+        if (e.target.value < 0){
+            document.getElementById("errfn-rent").innerText = 'Please Enter Valid Number';
+            document.getElementById("errfn-rent").style.color = 'red';
+        }
+        else if ( e.target.value >= 0){
+            document.getElementById("errfn-rent").innerText ='';
+        }
+
+    })
+    document.getElementById("cloth-input").addEventListener('keyup',function(e){
+        if (e.target.value < 0){
+            document.getElementById("errfn-cloth").innerText = 'Please Enter Valid Number';
+            document.getElementById("errfn-cloth").style.color = 'red';
+        }
+        else if ( e.target.value >= 0){
+            document.getElementById("errfn-cloth").innerText ='';
+        }
+
+    })
+
+
+
+    
